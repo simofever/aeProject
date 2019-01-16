@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="jumbotron row text-center">
+        <h1>CLOTHING ITEMS</h1>
+        <p>Add items into the Closet</p>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="val.iName" placeholder="Item" />
+                <span class="input-group-addon">Ex: Scarf</span>
+            </div>
+        </div>
+    
+        <div class="col-md-4">
+            <div class="input-group">
+                <input type="text" class="form-control" ng-model="val.color" placeholder="Color" />
+                <span class="input-group-addon">Ex: Black</span>
+            </div>
+        </div>
+        
+        <div class="col-md-2">
+            <div class="input-group">
+                <input type="number" min="32" max="54" class="form-control" ng-model="val.size" placeholder="Size"/>
+                <span class="input-group-addon">32-54</span>
+            </div>
+        </div>
+        
+        <div class="col-md-2">
+            <button ng-click="insertItem(val)" class="btn btn-success btn-block">Add</button>
+        </div>
+    </div>
+    
+    <div class="row">
+        &nbsp;
+    </div>
+    
+    <div class="row">
+    
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Item</th>
+                    <th class="text-center">Color</th>
+                    <th class="text-center">Size</th>
+                    <th class="text-right" colspan="2">Options</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in items">
+                    <td>{{ item.id }}</td>
+                    <td>{{ item.iName }}</td>
+                    <td class="text-center">{{ item.color }}</td>
+                    <td class="text-center">{{ item.size }}</td>
+                    <td class="text-right">
+                        <button ng-click="putItem(item.id, val)" class="btn btn-info">Edit</button></button>
+                        <button ng-click="deleteItem(item.id)" class="btn btn-danger">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

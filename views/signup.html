@@ -1,0 +1,31 @@
+<div class="container">
+	<div class="panel panel-primary" style="margin-top: 180px">
+		<div class="panel-heading text-center">Register for an account</div>
+		<form name="registerForm" class="form-signup" ng-submit="signup('signin', val)"
+		<div class="panel-body">
+			<div class="input-group">
+		  		<span class="input-group-addon">Username</span>
+				<input type="text" class="form-control" ng-model="val.name" required autofocus>
+			</div>
+			<br>
+			<div class="input-group">
+		  		<span class="input-group-addon">Email</span>
+				<input type="text" class="form-control" ng-model="val.email" required emailValidation id="emailSignup">
+			</div>
+			<br>
+			<div class="input-group">
+		  		<span class="input-group-addon">Password</span>
+				<input type="password" class="form-control" ng-model="val.password" required>
+			</div>
+			<br>
+			<div class="input-group col-md-12">
+				<button type="submit" class="btn btn-primary btn-block">Sign up</button>
+			</div>
+		</div>
+		
+	  	<div class="panel-footer text-right">
+			<a ng-click="back('/signin')"> Back </a>
+	  	</div>
+	</div>
+</div>
+

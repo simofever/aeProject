@@ -1,0 +1,24 @@
+<div class="container">
+	<div class="panel panel-primary" style="margin-top: 180px">
+		<div class="panel-heading text-center">Welcome back to your online closet <i class="glyphicon glyphicon-heart"></i></div>
+		<div class="panel-body">
+			<div class="input-group">
+		  		<span class="input-group-addon">Username</span>
+				<input type="text" class="form-control" id="username" ng-model="username">
+			</div>
+			<br>
+			<div class="input-group">
+		  		<span class="input-group-addon">Password</span>
+				<input type="password" class="form-control" id="password" ng-model="password">
+			</div>
+			<br>
+			<div class="input-group col-md-12">
+				<button type="submit" class="btn btn-primary btn-block" ng-click="showItems('/items', username, password)">Log In</button>
+			</div>
+		</div>
+		
+	  	<div class="panel-footer text-right">
+			<a ng-click="signup('/signup')">Be awesome! (Create account, I mean)</a>
+	  	</div>
+	</div>
+</div>
